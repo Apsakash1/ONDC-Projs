@@ -11,6 +11,8 @@ function initDate(){
   date = new Date();
   date.setTime(new Date().getTime() + myTimeZone * 60 * 60 * 1000 );
 }
+//Subscriber URL
+const subscriber_url = "https://api.leegum.com";
  
 //BAP Keys
 const signing_public_key = "zFEUhrt4CIu6kc2zqfv04CzQZkepxqCeyw+bq9lAw6A=";
@@ -132,7 +134,7 @@ let msg ={"context":{"domain":"nic2004:52110","country":"IND","city":"*","action
 // ,"message":{"intent":
 // {"fulfillment":{"start":{"location":{"gps":"10.108768, 76.347517"}},"end":{"location":{"gps":"10.102997, 76.353480"}}}}}};
 let bap_id = "leegum.com";
-let bap_uri = "https://leegum.com/ondc/user";
+let bap_uri = subscriber_url;
 let core_version = "0.9.1";
 
 msg.context.core_version = core_version;
